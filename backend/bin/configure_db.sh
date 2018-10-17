@@ -7,5 +7,8 @@ createdb -U whatapalaver dragonstackdb
 
 psql -U whatapalaver dragonstackdb < ./bin/sql/generation.sql
 psql -U whatapalaver dragonstackdb < ./bin/sql/dragon.sql
+psql -U whatapalaver dragonstackdb < ./bin/sql/trait.sql
+
+node ./bin/insertTraits.js
 
 echo "dragonstackdb configured"
